@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 6f0b5612ef998486a9336ca2ba70fbff
+timeCreated: 1508494030
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Block Talk
+  fontNames:
+  - Block Talk
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
