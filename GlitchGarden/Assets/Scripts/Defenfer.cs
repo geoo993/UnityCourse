@@ -14,14 +14,4 @@ public class Defenfer : MonoBehaviour {
 		
 	}
     
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-        print(collision.gameObject.name + " on Trigger Enter");   
-    }
-
-    void OnTriggerExit2D(Collider2D collision)
-    {
-        
-    }
-    
 }

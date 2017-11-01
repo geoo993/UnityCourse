@@ -42,6 +42,7 @@ public class Attacker : MonoBehaviour {
             anim.SetBool("IsAttacking", false);
         }
         
+        print(Button.selectedDefender);
 	}
     
     public void SetSpeed(float speed){
@@ -68,7 +69,7 @@ public class Attacker : MonoBehaviour {
     
     void OnTriggerEnter2D(Collider2D collision)
     {
-        print(collision.gameObject.name + " Trigger Enter");  
+        //print(collision.gameObject.name + " Trigger Enter");  
     }
 
     void OnTriggerExit2D(Collider2D collision)
