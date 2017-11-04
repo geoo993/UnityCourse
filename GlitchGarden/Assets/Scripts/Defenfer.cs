@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class Defenfer : MonoBehaviour {
 
+    [Range(0, 100)]
+    public int starsCost = 10;
+    private StarsDisplay starsDisplay;
+    
 	// Use this for initialization
 	void Start () {
-		
+        starsDisplay = FindObjectOfType<StarsDisplay>();
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public void AddStars(int amount){
+        starsDisplay.AddStars(amount);
+    }
     
 }

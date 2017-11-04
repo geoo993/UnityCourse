@@ -4,7 +4,9 @@ using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class Attacker : MonoBehaviour {
-
+    
+    [Tooltip("Average number of seconds between appearences"), Range(1.0f, 50.0f)]
+    public float seenEverySeconds;
     private float walkSpeed;
     private GameObject currentTarget;
     private Animator anim;
@@ -26,7 +28,10 @@ public class Attacker : MonoBehaviour {
     
     void Awake()
     {
-        rigidBody = gameObject.AddComponent<Rigidbody2D>();
+        if (rigidBody == null)
+        {
+            rigidBody = gameObject.AddComponent<Rigidbody2D>();
+        }
 		rigidBody.isKinematic = true;
     }
     
@@ -42,7 +47,6 @@ public class Attacker : MonoBehaviour {
             anim.SetBool("IsAttacking", false);
         }
         
-        print(Button.selectedDefender);
 	}
     
     public void SetSpeed(float speed){
@@ -53,7 +57,7 @@ public class Attacker : MonoBehaviour {
     public void StrikeCurrentTarget(float damage){
         if (currentTarget)
         {
-            Debug.Log(name + " Caused damaged " + damage);
+            //Debug.Log(name + " Caused damaged " + damage);
             Health health = currentTarget.GetComponent<Health>();
             if (health)
             {
